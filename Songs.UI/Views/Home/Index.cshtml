@@ -1,0 +1,87 @@
+﻿@model Songs.UI.Viewmodels.AllViewmodel 
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>@Html.ActionLink("Songs", "Index", "Songs")</h2>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Songs.FirstOrDefault().Title)
+                </th>
+            </tr>
+            <tr>
+                
+            </tr>
+
+            @foreach (var item in Model.Songs)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.Title, "Details", "Songs", new { id = item.SongId }, null)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-md-3">
+        <h2>@Html.ActionLink("Albums", "Index", "Albums")</h2>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Albums.FirstOrDefault().Title)
+                </th>
+            </tr>
+
+            @foreach (var item in Model.Albums)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.Title, "Details", "Albums", new { id = item.AlbumId }, null)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-md-3">
+        <h2>@Html.ActionLink("Performers", "Index", "Performers")</h2>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Performers)
+                </th>
+            </tr>
+
+            @foreach (var item in Model.Performers)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.FullName, "Details", "Performers", new { id = item.PerformerId }, null)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-md-3">
+        <h2>@Html.ActionLink("Genres", "Index", "Genres")</h2>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Genres.FirstOrDefault().Name)
+                </th>
+            </tr>
+
+            @foreach (var item in Model.Genres)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.Name, "Details", "Genres", new { id = item.GenreId }, null)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

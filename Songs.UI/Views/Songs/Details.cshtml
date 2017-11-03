@@ -1,0 +1,70 @@
+﻿@model Songs.Classes.Song
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details Song</h2>
+
+<div>
+    <h4>Song</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SongGenre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SongGenre.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+        
+        <dt>
+            <label>Performers</label>
+        </dt>
+        <dd>
+            @foreach (var item in Model.Performers)
+            {
+                @(!item.NickName.IsEmpty() ? Html.DisplayFor(modelitem => item.NickName) : Html.DisplayFor(modelitem => item.FullName))
+            }
+        </dd>
+        
+        <dt>
+            <label>Albums</label>
+        </dt>
+        <dd>
+            @foreach (var item in Model.Albums)
+            {
+                @Html.DisplayFor(modelitem => item.Title)
+            }
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SongId }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.SongId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
