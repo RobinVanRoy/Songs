@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\..\RobinVanRoy_ERD_Songs\Entity Relationship Liedjes.jpg = ..\..\RobinVanRoy_ERD_Songs\Entity Relationship Liedjes.jpg
 		..\..\Gebruikshandleiding.docx = ..\..\Gebruikshandleiding.docx
 		..\..\Informatie stored procedures en inline queries.docx = ..\..\Informatie stored procedures en inline queries.docx
+		..\SongDb.sql = ..\SongDb.sql
 	EndProjectSection
 EndProject
 Global
