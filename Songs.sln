@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Songs.Classes", "Songs.Classes\Songs.Classes.csproj", "{F8797297-C15F-460A-88B0-5A3A22CCA9C1}"
 EndProject
@@ -10,6 +10,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Songs.UI", "Songs.UI\Songs.UI.csproj", "{C20DF16A-291B-420D-8F61-60B10ACF5F0B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Songs.Test", "Songs.Test\Songs.Test.csproj", "{F24EFDC3-E088-4460-B618-F13434CD9012}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{837793ED-E4C9-4A82-BDDA-16DEA38FABDF}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\RobinVanRoy_ERD_Songs\Entity Relationship Liedjes.jpg = ..\..\RobinVanRoy_ERD_Songs\Entity Relationship Liedjes.jpg
+		..\..\Gebruikshandleiding.docx = ..\..\Gebruikshandleiding.docx
+		..\..\Informatie stored procedures en inline queries.docx = ..\..\Informatie stored procedures en inline queries.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +43,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04B8A3D3-A19F-414B-804F-3B0D01A2D5DE}
 	EndGlobalSection
 EndGlobal
